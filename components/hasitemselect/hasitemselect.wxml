@@ -1,0 +1,18 @@
+<!--components/hasitemselect/hasitemselect.wxml-->
+<view class="select">
+  <view class="select-item" style="background: {{background}};color: {{color}};" wx:for="{{select}}" wx:key="index" data-index="{{index}}" bindtap="selectClick">
+    <text class="text">{{item.data[item.index].name || item.name || item.data[0].name}}</text>
+    <mp-icon class="icon {{current == index?'active':''}}" icon="arrow" color="{{color}}" size="10"></mp-icon>
+  </view>
+</view>
+<view class="select-item-list" wx:if="{{current !== null}}" style="height: calc(100vh - {{shadowTop}}px);margin-left:-{{shadowLeft}}px;">
+  <view class="shadow"></view>
+  <view class="list" bindtap="closeSelect">
+    <scroll-view class="scroll" scroll-y="{{true}}" style="height: {{select[current].data.length > 6?unfold? 'calc(100% - 100rpx)':'400rpx':select[current].data.length * 80 + 'rpx'}};">
+      <navigator url="#" class="item" style="background: {{background}};color: {{color}};" wx:for="{{select[current].data}}" wx:key="index" data-index="{{index}}" catchtap="itemClick">{{item.name}}</navigator>
+    </scroll-view>
+    <view class="more" wx:if="{{select[current].data.length > 6}}" style="{{unfold ? 'padding-bottom: 50rpx;': ''}}" catchtap="arrowClick">
+      <mp-icon class="arrow {{unfold?'active':''}}" icon="arrow" color="#999" size="12"></mp-icon>
+    </view>
+  </view>
+</view>

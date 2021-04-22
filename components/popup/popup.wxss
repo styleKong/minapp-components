@@ -1,0 +1,44 @@
+/* components/self-popup/self-popup.wxss */
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  left: 0;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+}
+.popup-content {
+  position: absolute;
+  z-index: 2;
+}
+/* 从顶部弹出 */
+.top {
+  top: 0;
+  left: 0;
+}
+.top .content{
+  transform: translateY(-100%);
+}
+
+/* 从中间弹出 */
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.center .content {
+  transform: scale(0.5);
+}
+
+/* 从底部弹出 */
+.bottom {
+  bottom: 0;
+  left: 0;
+}
+.bottom .content {
+  transform: translateY(100%);
+}

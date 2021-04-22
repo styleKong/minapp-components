@@ -1,0 +1,99 @@
+/* components/hasitemselect/hasitemselect.wxss */
+.select {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1px #eee solid;
+}
+.select .select-item {
+  flex: 1;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  text-align: center;
+  position: relative;
+}
+.select .select-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 100%;
+  height: 40rpx;
+  margin-top: -20rpx;
+  left: 0;
+  border-left: 1px #eee solid;
+}
+.select .select-item:first-child::before{
+  border: none;
+}
+.select .select-item .text {
+  margin-right: 6rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.select .select-item .icon {
+  display: inline-block;
+  transform: rotate(90deg);
+  transition: all 0.2s;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  vertical-align: middle;
+}
+.select .select-item .icon.active {
+  transform: rotate(270deg);
+}
+.select-item-list {
+  width: 100vm;
+  position: relative;
+}
+.select-item-list .shadow {
+  background: rgba(0,0,0,0.2);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.select-item-list .list {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+}
+.select-item-list .list .scroll {
+  transition: height 0.2s;
+  background: #fff;
+}
+.select-item-list .more {
+  width: 100%;
+  height: 50rpx;
+  background: #fff;
+  position: relative;
+}
+.select-item-list .more .arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: rotate(90deg);
+  line-height: 50rpx;
+  transition: all 0.2s;
+}
+.select-item-list .more .arrow.active {
+  transform: rotate(270deg);
+}
+.select-item-list .list .item {
+  width: 100%;
+  height: 68rpx;
+  border-bottom: 1xp #eee solid;
+  line-height: 68rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}

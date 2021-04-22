@@ -1,0 +1,19 @@
+/* moviePages/components/countdown/countdowm.wxss */
+.countdowm {
+  white-space: nowrap;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+}
+.num {
+  padding: 5rpx;
+  border-radius: 6rpx;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.2;
+}
+.splitor {
+  margin: 0 6rpx;
+  display: inline-block;
+  vertical-align: middle;
+}

@@ -1,0 +1,12 @@
+<!--components/tabs/tabs.wxml-->
+
+<view>
+	<view class="{{tabType == '2' ? 'order_tabs' : 'lists_tabs'}}" style="background: {{background}};">
+		<block wx:for="{{tabs}}" wx:key="index">
+			<view class="tabs_item" style="color:{{typeId == item[tabid]?activeColor:color}}" id="{{item[tabid]}}" bindtap="tabsClick">
+				<text>{{isNum ? item[name] + '(' + item[num] + ')' : item[name]}}</text>
+				<view class="hr" style="height: {{borderHeight}};background: {{borderColor}};width: {{typeId == item[tabid]?leng == 'min'?'20%':'100%':'0'}}"></view>
+			</view>
+		</block>
+	</view>
+</view>

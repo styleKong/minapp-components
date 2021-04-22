@@ -1,0 +1,42 @@
+/* components/nav-bar/nav-bar.wxss */
+/* 导航样式start */
+.nav {
+  position: fixed;
+  z-index: 960;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+.nav-bar {
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+}
+.nav-bar-content {
+  display: flex;
+}
+.nav-left {
+  text-align: left;
+  box-sizing: border-box;
+}
+.nav-left .icon {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+.nav-center {
+  flex: 1;
+  width: 50%;
+}
+.nav-center .text {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+} 
+/* end */

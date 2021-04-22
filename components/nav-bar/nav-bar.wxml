@@ -1,0 +1,37 @@
+<!--components/nav-bar/nav-bar.wxml-->
+<!-- 使用方法 -->
+<view class="nav" style="background:{{background}};background-size: 100% {{backgroundHeight}};">
+  <view style="height:{{navBarHeight.statusBarHeight}}px"></view>
+  <view class="nav-bar" style="height: {{navBarHeight.navBarHeight}}px; line-height: {{navBarHeight.navBarHeight}}px;">
+    <view class="nav-bar-content" style="width: {{navBarHeight.navBarLeft}}px;">
+      <block wx:if="{{left_icon != 'none' || leftText || title}}">
+        <view class="nav-left" style="width: calc(100vw - {{navBarHeight.navBarLeft}}px);">
+          <mp-icon class="icon" 
+          style="width: {{navBarHeight.navBarHeight}}px;line-height: {{navBarHeight.navBarHeight}}px; height:{{navBarHeight.navBarHeight}}px" 
+          wx:if="{{left_icon != 'none'}}" 
+          type="outline" 
+          icon="{{left_icon}}" 
+          size="{{left_icon == 'home'? 24:left_icon == 'back'? 14:leftIconSize}}" 
+          color="{{color}}" bindtap="backClick"></mp-icon>
+          <text wx:if="{{leftText}}">{{leftText}}</text>
+          <block wx:else>
+            <!-- 左边插入 -->
+            <slot name="left"></slot>
+          </block>
+        </view>
+        <view class="nav-center">
+          <text class="text" wx:if="{{title}}" style="color:{{color}};">{{title}}</text>
+          <!-- 中间插入 -->
+          <block wx:else>
+            <slot name="center"></slot>
+          </block>
+        </view>
+      </block>
+      <!-- 整体插入 -->
+      <block wx:else>
+        <slot name="center"></slot>
+      </block>
+    </view>
+    <view style="width: calc(100vw - {{navBarHeight.navBarLeft}}px);"></view>
+  </view>
+</view>

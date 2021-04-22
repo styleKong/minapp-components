@@ -1,0 +1,10 @@
+<!--moviePages/components/countdown/countdowm.wxml-->
+<view class="countdowm" style="color: {{color}};font-size: {{size}}">
+  <text class="num" wx:if="{{showday}}" style="background: {{backgroundColor}}">{{d}}</text>
+  <text class="splitor" wx:if="{{showday}}" style="color: {{splitorColor}}">:</text>
+  <text class="num" wx:if="{{showhour}}" style="background: {{backgroundColor}}">{{h}}</text>
+  <text class="splitor" wx:if="{{showhour}}" style="color: {{splitorColor}}">:</text>
+  <text class="num" wx:if="{{showminute}}" style="background: {{backgroundColor}}">{{m}}</text>
+  <text class="splitor" wx:if="{{showminute}}" style="color: {{splitorColor}}">:</text>
+  <text class="num" wx:if="{{showsecond}}" style="background: {{backgroundColor}}">{{s}}</text>
+</view>

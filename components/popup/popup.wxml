@@ -1,0 +1,10 @@
+<!--components/self-popup/self-popup.wxml-->
+<view class="popup" wx:if="{{show}}">
+  <view class="shadow" bindtap="close" wx:if="{{shadow && shadowcancel}}" animation="{{shadowAnimation}}"></view>
+  <view class="shadow" wx:elif="{{shadow}}" animation="{{shadowAnimation}}"></view>
+  <view class="popup-content {{type}}">
+    <view class="content" animation="{{animation}}">
+      <slot></slot>
+    </view>
+  </view>
+</view>

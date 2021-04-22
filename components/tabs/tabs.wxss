@@ -1,0 +1,38 @@
+/* components/tabs/tabs.wxss */
+.lists_tabs {
+  width: 100%;
+  height: 80rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff
+}
+
+.lists_tabs .tabs_item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 24rpx;
+  line-height: 80rpx;
+  color: #000;
+  display: block;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+}
+.lists_tabs .tabs_item .text {
+  display: block;
+}
+.lists_tabs .tabs_item .hr {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 3rpx;
+  transition: all 0.2s;
+  left: 50%;
+  transform: translateX(-50%);
+}
